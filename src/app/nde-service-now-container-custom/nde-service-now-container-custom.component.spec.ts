@@ -1,5 +1,5 @@
+// nde-service-now-container-custom.component.spec.ts
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { NdeServiceNowContainerCustomComponent } from './nde-service-now-container-custom.component';
 
 describe('NdeServiceNowContainerCustomComponent', () => {
@@ -8,10 +8,12 @@ describe('NdeServiceNowContainerCustomComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NdeServiceNowContainerCustomComponent]
+      declarations: [ NdeServiceNowContainerCustomComponent ]
     })
     .compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(NdeServiceNowContainerCustomComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
