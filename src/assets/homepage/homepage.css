@@ -172,7 +172,14 @@
         }
       }
     }
-  }
+      /* Ensure announcement lists show bullets when served */
+      ul {
+          li {
+            list-style: disc outside;
+            margin: 0 0 1rem 1.25rem;
+            padding: 0;
+            }
+        }
 
   .about {
     .about-content {
