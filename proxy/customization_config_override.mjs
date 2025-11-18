@@ -3,7 +3,7 @@ export const customizationConfigOverride = {
   "libraryLogo": "custom/MOCKINST-MOCKVID/assets/images/library-logo.png",
   "viewSvg": "custom/MOCKINST-MOCKVID/assets/icons/custom_icons.svg",
   "homepage": {
-    "homepageBGImage": "custom/MOCKINST-MOCKVID/assets/homepage/homepage_background.svg",
+    "homepageBGImage": "custom/MOCKINST-MOCKVID/assets/images/library-banner.png",
     "html": {
       "en": "custom/MOCKINST-MOCKVID/assets/homepage/homepage_en.html",
       "he": "custom/MOCKINST-MOCKVID/assets/homepage/homepage_he.html",
