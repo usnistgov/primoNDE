@@ -89,12 +89,19 @@
     }
 
     .welcome {
-      //max-width: 32rem;
+      max-width: fit-content;
       padding-block: 1rem;
       gap: 1.5rem;
 
       @include mixing.respond-to('small', 'xsmall') {
         padding: 0;
+      }
+      ul {
+        li {
+          list-style: disc outside;
+          margin: 0 0 0rem 1.25rem;
+          padding: 0;
+        }
       }
 
       .welcome-title {
