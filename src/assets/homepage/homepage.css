@@ -149,6 +149,8 @@
       border: .0625rem solid var(--sys-primary);
       max-width: 32.6875rem;
       gap:1rem;
+      height:fit-content;
+
 
 
       @include mixing.respond-to('small', 'xsmall') {
