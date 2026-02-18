@@ -8,3 +8,10 @@ export const selectorComponentMap = new Map<string, any>([
   // Mapping your new collection discovery component
   ['nde-collection-discovery-gallery-item-bottom', NdeCollectionDiscoveryGalleryItemContainerCustomComponent],
 ]);
+import { HeaderComponent } from '../header/header.component';
+import { FooterComponent } from '../footer/footer.component';
+
+export const selectorComponentMap = new Map<string, any>([
+  ['nde-header-before', HeaderComponent],
+  ['nde-footer-bottom', FooterComponent],
+]);
