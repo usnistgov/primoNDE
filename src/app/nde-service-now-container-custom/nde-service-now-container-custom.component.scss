@@ -1,0 +1,17 @@
+// nde-service-now-container-custom.component.scss
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#report-problem {
+  @extend .center-content;
+  a {
+    text-decoration: none;
+    color: #337ab7; // You can change this to your desired link color
+  }
+  img {
+    vertical-align: middle;
+  }
+}

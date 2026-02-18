@@ -1,4 +1,4 @@
-import {ApplicationRef, DoBootstrap, Injector, NgModule} from '@angular/core';
+import {ApplicationRef, DoBootstrap, Injector, ModuleWithProviders, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent} from './app.component';
 import {createCustomElement, NgElementConstructor} from "@angular/elements";
@@ -7,15 +7,18 @@ import {selectorComponentMap} from "./custom1-module/customComponentMappings";
 import {TranslateModule} from "@ngx-translate/core";
 import { CommonModule } from '@angular/common';
 import { AutoAssetSrcDirective } from './services/auto-asset-src.directive';
-import {SHELL_ROUTER} from "./injection-tokens";
 
+// 1. IMPORT YOUR COMPONENT
+import { NdeCollectionDiscoveryGalleryItemContainerCustomComponent } from './nde-collection-discovery-gallery-item-container-custom/nde-collection-discovery-gallery-item-container-custom.component';
 
-
-export const AppModule = ({providers, shellRouter}: {providers:any, shellRouter: Router}) => {
+export const AppModule = ({providers}: {providers:any}) => {
    @NgModule({
     declarations: [
       AppComponent,
-      AutoAssetSrcDirective
+      AutoAssetSrcDirective,
+
+      // 2. DECLARE YOUR COMPONENT HERE
+      NdeCollectionDiscoveryGalleryItemContainerCustomComponent
     ],
     exports: [AutoAssetSrcDirective],
     imports: [
@@ -23,7 +26,7 @@ export const AppModule = ({providers, shellRouter}: {providers:any, shellRouter:
       CommonModule,
       TranslateModule.forRoot({})
     ],
-    providers: [...providers, {provide: SHELL_ROUTER, useValue: shellRouter}],
+    providers: providers,
     bootstrap: []
   })
   class AppModule implements DoBootstrap{
@@ -35,6 +38,7 @@ export const AppModule = ({providers, shellRouter}: {providers:any, shellRouter:
 
     ngDoBootstrap(appRef: ApplicationRef) {
       for (const [key, value] of selectorComponentMap) {
+        // This converts the components in your map (including the new one) into Web Components
         const customElement = createCustomElement(value, {injector: this.injector});
         this.webComponentSelectorMap.set(key, customElement);
       }
@@ -50,4 +54,3 @@ export const AppModule = ({providers, shellRouter}: {providers:any, shellRouter:
   }
   return AppModule
 }
-

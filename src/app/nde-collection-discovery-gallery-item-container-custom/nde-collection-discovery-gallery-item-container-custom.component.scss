@@ -1,0 +1,44 @@
+:host {
+  display: block;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 5px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: .5rem;
+  margin-bottom: 10px;
+
+  &:empty {
+    display: none;
+  }
+}
+
+.gallery-custom-metadata {
+  background: transparent;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5em;
+
+  .meta-row {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    /* Small spacing between lines */
+    margin-bottom: 2px;
+
+    &.series-row {
+      color: #000000;
+    }
+
+    &.author-row {
+      color: #000000;
+    }
+
+    &.date-row {
+      color: #000000;
+    }
+  }
+}
