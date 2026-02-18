@@ -8,11 +8,17 @@ import {TranslateModule} from "@ngx-translate/core";
 import { CommonModule } from '@angular/common';
 import { AutoAssetSrcDirective } from './services/auto-asset-src.directive';
 
+// 1. IMPORT YOUR COMPONENT
+import { NdeCollectionDiscoveryGalleryItemContainerCustomComponent } from './nde-collection-discovery-gallery-item-container-custom/nde-collection-discovery-gallery-item-container-custom.component';
+
 export const AppModule = ({providers}: {providers:any}) => {
    @NgModule({
     declarations: [
       AppComponent,
-      AutoAssetSrcDirective
+      AutoAssetSrcDirective,
+
+      // 2. DECLARE YOUR COMPONENT HERE
+      NdeCollectionDiscoveryGalleryItemContainerCustomComponent
     ],
     exports: [AutoAssetSrcDirective],
     imports: [
@@ -32,6 +38,7 @@ export const AppModule = ({providers}: {providers:any}) => {
 
     ngDoBootstrap(appRef: ApplicationRef) {
       for (const [key, value] of selectorComponentMap) {
+        // This converts the components in your map (including the new one) into Web Components
         const customElement = createCustomElement(value, {injector: this.injector});
         this.webComponentSelectorMap.set(key, customElement);
       }
@@ -47,4 +54,3 @@ export const AppModule = ({providers}: {providers:any}) => {
   }
   return AppModule
 }
-

@@ -1,1 +1,11 @@
-<p>nde-collection-discovery-gallery-item-container-custom works!</p>
+<div class="gallery-custom-metadata" *ngIf="isVisible">
+  <div class="meta-row series-row" *ngIf="series" title="{{ series }}">
+    Series No: {{ series }}
+  </div>
+  <div class="meta-row author-row" *ngIf="author" title="{{ author }}">
+    {{ author }}
+  </div>
+  <div class="meta-row date-row" *ngIf="creationDate">
+    {{ creationDate }}
+  </div>
+</div>
