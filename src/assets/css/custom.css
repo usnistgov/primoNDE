@@ -5,6 +5,12 @@ background-color: gray;
 opacity: 90%;
 }
 
+/* style h2 text above search bar */
+div.custom-search-bar-container h2 {
+    text-shadow: 0 0 15px #000;
+    padding-bottom: .5em;
+}
+
 /* LOCAL BANNER */
 body::before
 {
@@ -17,8 +23,3 @@ body::before
     font-size: large;
 }
 /* END local banner */
-
-div.custom-search-bar-container h2 {
-    text-shadow: 0 0 15px #000;
-    padding-bottom: .5em;
-}
