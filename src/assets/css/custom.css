@@ -23,3 +23,8 @@ body::before
     font-size: large;
 }
 /* END local banner */
+
+/* search bar background */
+nde-top-bar {
+    background-color: #12659c !important;
+}
