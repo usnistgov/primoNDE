@@ -1,0 +1,24 @@
+/* Hide the background overlay in the search bar container */
+.custom-search-bar-container .background-overlay {
+/* display: none; */
+background-color: gray;
+opacity: 90%;
+}
+
+/* LOCAL BANNER */
+body::before
+{
+    content: "This site is in early development";
+    display: inline-block;
+    background: #FFFF00;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    font-size: large;
+}
+/* END local banner */
+
+div.custom-search-bar-container h2 {
+    text-shadow: 0 0 15px #000;
+    padding-bottom: .5em;
+}
