@@ -23,3 +23,9 @@ body::before
     font-size: large;
 }
 /* END local banner */
+
+
+/* Hide the default NDE No Results element */
+nde-search-no-results {
+    display: none !important;
+}

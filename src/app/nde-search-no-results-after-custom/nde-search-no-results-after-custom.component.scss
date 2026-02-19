@@ -1,0 +1,81 @@
+:host {
+  display: block;
+  width: 100%;
+  padding: 3rem 1rem;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+.no-results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .did-you-mean-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 24px;
+
+    .mat-icon {
+      margin-bottom: 12px;
+      width: 60px;
+      height: 60px;
+    }
+
+    .no-record-found {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+
+    .no-results {
+      font-size: 16px;
+      color: #333;
+    }
+  }
+
+  .we-suggest-container {
+    border: 1px solid #d3d3d3;
+    padding: 24px 32px;
+    max-width: 600px;
+    width: 100%;
+    background-color: #ffffff;
+    text-align: left;
+
+    .suggestion-section-title {
+      font-size: 16px;
+      color: #555;
+      margin: 0 0 12px 0;
+      &:not(:first-child) {
+        margin-top: 24px;
+      }
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 24px;
+      margin: 0;
+
+      li {
+        font-size: 15px;
+        color: #555;
+        margin-bottom: 8px;
+        line-height: 1.5;
+
+        a {
+          color: #0075b0;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
