@@ -3,6 +3,7 @@ import { NdeCollectionDiscoveryGalleryItemContainerCustomComponent } from "../nd
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { NdeSearchNoResultsAfterCustomComponent } from '../nde-search-no-results-after-custom/nde-search-no-results-after-custom.component';
+import { NdeCitationLinkerAfterCustomComponent } from '../nde-citation-linker-after-custom/nde-citation-linker-after-custom.component';
 
 // Define the map
 export const selectorComponentMap = new Map<string, any>([
@@ -11,4 +12,5 @@ export const selectorComponentMap = new Map<string, any>([
   ['nde-header-before', HeaderComponent],
   ['nde-footer-bottom', FooterComponent],
   ['nde-search-no-results-after', NdeSearchNoResultsAfterCustomComponent],
+  ['nde-citation-linker-after', NdeCitationLinkerAfterCustomComponent]
 ]);
