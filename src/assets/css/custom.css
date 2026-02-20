@@ -33,11 +33,11 @@ nde-search-no-results {
 /* BEGIN Fetch Item - Citation Linker Hide certain fields */
 
 /* removes radio 1 - books */
-mat-radio-button#mat-radio-1 {
+mat-radio-button:has(input[value="book"])  {
   display:none;
 }
 /* removes radio 2 - journal */
-mat-radio-button#mat-radio-2 {
+mat-radio-button:has(input[value="journal"])  {
   display:none;
 }
 /* BEGIN CITATION LINKER: Hide Specific Fields
