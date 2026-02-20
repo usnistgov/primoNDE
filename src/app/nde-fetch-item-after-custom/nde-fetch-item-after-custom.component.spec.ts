@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NdeFetchItemAfterCustomComponent } from './nde-citation-linker-after-custom.component';
+import { NdeFetchItemAfterCustomComponent } from './nde-fetch-item-after-custom.component';
 
 describe('NdeCitationLinkerAfterCustomComponent', () => {
   let component: NdeFetchItemAfterCustomComponent;
