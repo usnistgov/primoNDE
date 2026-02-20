@@ -1,7 +1,6 @@
 import { Component, AfterViewInit, OnDestroy } from '@angular/core';
 
 @Component({
-  // CHANGED: Hooking into the correct NDE element
   selector: 'nde-fetch-item-after-custom',
   template: ''
 })
@@ -16,7 +15,7 @@ export class NdeFetchItemAfterCustomComponent implements AfterViewInit, OnDestro
       const articleRadio = document.querySelector('input[value="article"]') as HTMLInputElement;
 
       if (articleRadio) {
-        // Once found, if it's not checked, click it!
+        // Once found, if it's not checked, click it
         if (!articleRadio.checked) {
           articleRadio.click();
         }
