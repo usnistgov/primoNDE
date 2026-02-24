@@ -1,6 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What am I searching?</title>
+
+  <style>
+
+    body {
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .search-static-page {
+      font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #333;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .search-static-page .page-title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 400;
+      color: #1a1a1a;
+      margin-bottom: 1rem;
+    }
+
+    .search-static-page .page-intro {
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .search-static-page .page-intro a {
+      color: #0075b0;
+      text-decoration: none;
+    }
+
+    .search-static-page .page-intro a:hover {
+      text-decoration: underline;
+    }
+
+    /* The 3-Column Grid */
+    .search-static-page .static-cards-grid {
+      display: grid;
+      /* Automatically adjusts: 3 columns on desktop, 1 on mobile */
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      align-items: stretch;
+    }
+
+    .search-static-page .custom-card {
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .search-static-page .custom-card.center-content {
+      text-align: center;
+    }
+
+    .search-static-page .custom-card .card-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin: 0 0 16px 0;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .search-static-page .custom-card h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #257a2d; /* NIST Accent Color */
+      margin: 20px 0 8px 0;
+    }
+
+    .search-static-page .custom-card p {
+      font-size: 15px;
+      line-height: 1.5;
+      color: #555;
+      margin-bottom: 16px;
+    }
+
+    .search-static-page .custom-card .help-text {
+      font-size: 14px;
+      margin-top: 16px;
+    }
+
+    .search-static-page .custom-card a {
+      color: #0075b0;
+      text-decoration: none;
+    }
+
+    .search-static-page .custom-card a:hover {
+      text-decoration: underline;
+    }
+
+    .search-static-page .image-wrapper {
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+  </style>
+</head>
 <body>
-<h1>Hello, World!</h1>
+
+  <div class="search-static-page">
+    <h1 class="page-title">What am I searching?</h1>
+
+    <p class="page-intro">
+      <strong>NIST Library Search</strong> contains ~300,000 titles owned by NIST, along with hundreds of millions of electronic resources such as journal and newspaper articles, book chapters, ebooks, conference proceedings, videos, reports, reviews, and more. Most of the content from the <a href="https://inet.nist.gov/mr/library/research-tools">individual databases</a> is discoverable in NIST Library Search.
+    </p>
+
+    <div class="static-cards-grid">
+
+      <div class="custom-card">
+        <h2 class="card-title">The Default "Everything" Search</h2>
+        <p>The default "Everything" search is a blended search of the other search profiles (Library Catalog, Articles, and NIST Technical Series).</p>
+        <p>If expanded, millions of resources NIST doesn't own are displayed, which allows a broader search and the ability to request resources through Interlibrary Loan (ILL).</p>
+        <div class="image-wrapper">
+          <img src="../images/expand-results.png" alt="Expand My Results Toggle" style="max-width: 100%; height: auto; border: #e0e0e0 solid 1px; border-radius: 4px;">
+        </div>
+      </div>
+
+      <div class="custom-card center-content">
+        <h2 class="card-title">Search Scope Visualized</h2>
+
+        <div class="image-wrapper">
+          <img src="../images/whatsearch.png" alt="Venn diagram showing Everything encompasses Articles, Library Catalog, and NIST Tech Series" style="max-width: 100%; height: auto;">
+        </div>
+
+        <p class="help-text">
+          Watch this <a href="https://tube.nist.gov/media/NIST+Research+Library+Search+Tutorial/1_byjlrcif">NIST Library Search video</a> to learn the basics of using NIST Library Search.
+        </p>
+        <p class="help-text">
+          Additional "How to Use the NIST Library Search" aids are available under collapsible headings on the <a href="https://inet.nist.gov/mr/library/how-use-nist-library-search?check_logged_in=1">Library's website</a>.
+        </p>
+      </div>
+
+      <div class="custom-card">
+        <h2 class="card-title">Specific Search Scopes</h2>
+
+        <h3>Library Catalog Search</h3>
+        <p>Searching the Library Catalog displays print and electronic books, print and electronic journals (not including articles), and physical and electronic audio/visual material.</p>
+
+        <h3>Articles Search</h3>
+        <p>Searching Articles displays journal and newspaper articles, books chapters, reviews, and preprints.</p>
+
+        <h3>NIST Technical Series Search</h3>
+        <p>Searching NIST Technical Series limits the search to NIST Technical Series Publications.</p>
+      </div>
+    </div>
+
+  </div>
+
 </body>
 </html>
