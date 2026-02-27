@@ -16,32 +16,38 @@
 
   </div>
 
-  <div class="we-suggest-container">
+  <div class="custom-cards-grid">
 
-    <p class="suggestion-section-title">Suggestions:</p>
-    <ul id="list-of-suggestions">
-      <li>Try your search again with <a [href]="'https://nist.primo.exlibrisgroup.com/nde/search?query=' + encodedSearchTerm + '&tab=Everything&search_scope=MyInst_and_CI&pcAvailability=true&vid=01NIST_INST:01NIST_NDE'">"Expand My Results."</a></li>
-      <li>Make sure that all words are spelled correctly.</li>
-      <li>Try a different search scope.</li>
-      <li>Try different keywords.</li>
-      <li>Try more general keywords.</li>
-      <li>Try fewer keywords.</li>
-    </ul>
+    <div class="custom-card">
+      <h3 class="card-title">Suggestions</h3>
+      <ul>
+        <li>Try your search again with <a [href]="'https://nist.primo.exlibrisgroup.com/discovery/search?query=any,contains,' + encodedSearchTerm + '&tab=Everything&search_scope=MyInst_and_CI&vid=01NIST_INST:01NIST&lang=en&offset=0&pcAvailability=true'">"Expand My Results."</a></li>
+        <li>Make sure that all words are spelled correctly.</li>
+        <li>Try a different search scope.</li>
+        <li>Try different keywords.</li>
+        <li>Try more general keywords.</li>
+        <li>Try fewer keywords.</li>
+      </ul>
+    </div>
 
-    <p class="suggestion-section-title">Try My Search In:</p>
-    <ul id="list-of-external-links">
-      <li><a [href]="'https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=' + encodedSearchTerm" target="_blank">IEEE Xplore</a></li>
-      <li><a [href]="'https://www.sciencedirect.com/search?qs=' + encodedSearchTerm" target="_blank">ScienceDirect</a></li>
-      <li><a [href]="'https://pubmed.ncbi.nlm.nih.gov/?term=' + encodedSearchTerm" target="_blank">PubMed</a></li>
-      <li><a [href]="'https://mathscinet.ams.org/mathscinet/publications-search?query=' + encodedSearchTerm + '&page=1&size=20&sort=newest&facets='" target="_blank">MathSciNet</a></li>
-      <li><a [href]="'https://app.knovel.com/kn/search?include_synonyms=off&page=0&query=' + encodedSearchTerm" target="_blank">Knovel</a></li>
-      <li><a href="https://inet.nist.gov/mr/library/research-tools" target="_blank">Other NIST Research Tools</a></li>
-    </ul>
+    <div class="custom-card">
+      <h3 class="card-title">Try My Search In</h3>
+      <ul>
+        <li><a [href]="'https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=' + encodedSearchTerm" target="_blank">IEEE Xplore</a></li>
+        <li><a [href]="'https://www.sciencedirect.com/search?qs=' + encodedSearchTerm" target="_blank">ScienceDirect</a></li>
+        <li><a [href]="'https://pubmed.ncbi.nlm.nih.gov/?term=' + encodedSearchTerm" target="_blank">PubMed</a></li>
+        <li><a [href]="'https://mathscinet.ams.org/mathscinet/publications-search?query=' + encodedSearchTerm + '&page=1&size=20&sort=newest&facets='" target="_blank">MathSciNet</a></li>
+        <li><a [href]="'https://app.knovel.com/kn/search?include_synonyms=off&page=0&query=' + encodedSearchTerm" target="_blank">Knovel</a></li>
+        <li><a href="https://inet.nist.gov/mr/library/research-tools" target="_blank">Other NIST Research Tools</a></li>
+      </ul>
+    </div>
 
-    <p class="suggestion-section-title">Need more help?</p>
-    <ul id="list-of-help">
-      <li>Email the NIST Library at <a href="mailto:library@nist.gov">library&#64;nist.gov</a>.</li>
-    </ul>
+    <div class="custom-card">
+      <h3 class="card-title">Need more help?</h3>
+      <ul>
+        <li>Email the NIST Library at <a href="mailto:library@nist.gov">library&#64;nist.gov</a>.</li>
+      </ul>
+    </div>
 
   </div>
 </div>
