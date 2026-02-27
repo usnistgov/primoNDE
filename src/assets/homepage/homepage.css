@@ -13,15 +13,14 @@
     width: 100%;
   }
 
-
   .menu-container {
     .menu {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
       grid-row-gap: 1.5rem;
       grid-column-gap: 1rem;
-      li {
 
+      li {
         a {
           background-color: var(--sys-inverse-on-surface);
           display: flex;
@@ -36,16 +35,12 @@
           height: 100%;
 
           @include mixing.respond-to('large', 'xlarge') {
-
             &:hover, &:focus {
-            transition: box-shadow .3s, transform .3s ease-in-out;
-            box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
-            transform: translateY(-1.1875rem);
+              transition: box-shadow .3s, transform .3s ease-in-out;
+              box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+              transform: translateY(-1.1875rem);
+            }
           }
-
-          }
-
-
 
           .icon {
             background-color: var(--sys-inverse-on-surface);
@@ -81,21 +76,27 @@
     }
   }
 
+  /* --- WELCOME & ANNOUNCEMENTS SECTION --- */
   .welcome-announcements-container {
+    display: flex;
     gap: 2rem;
 
-    @include mixing.respond-to('small', 'xsmall') {
+    /* Stack the left and right sides vertically on smaller screens */
+    @media (max-width: 959px) {
       flex-direction: column;
     }
 
+    /* Left Side: Welcome */
     .welcome {
-      max-width: fit-content;
+      flex: 1;
+      min-width: 0;
       padding-block: 1rem;
       gap: 1.5rem;
 
-      @include mixing.respond-to('small', 'xsmall') {
+      @media (max-width: 959px) {
         padding: 0;
       }
+
       ul {
         li {
           list-style: disc outside;
@@ -106,7 +107,7 @@
 
       .welcome-title {
         margin-block-end: .5rem;
-        @include mixing.respond-to('medium', 'small', 'xsmall') {
+        @media (max-width: 959px) {
           font-size: vars.$largeFontSize;
         }
       }
@@ -115,12 +116,12 @@
         font-size: vars.$bigFontSize;
         font-weight: vars.$normal;
 
-        @include mixing.respond-to('medium', 'small', 'xsmall') {
+        @media (max-width: 959px) {
           font-size: vars.$mediumFontSize;
         }
       }
 
-      /* Use direct child selector (>) so this only styles the library card button */
+      /* Style for the library card button */
       > a {
         padding-block: .5rem;
         padding-inline: 1rem;
@@ -135,7 +136,7 @@
         transition: background-color 0.3s ease;
         text-decoration: none;
 
-        @include mixing.respond-to('medium', 'small', 'xsmall') {
+        @media (max-width: 959px) {
           font-size: vars.$mediumFontSize;
         }
 
@@ -148,7 +149,8 @@
           box-shadow: 0 0 0 2px white, 0 0 0 3px #000000;
         }
       }
-      /* Style just for announcement links */
+
+      /* Style for announcement links inside welcome text */
       .welcome-list {
         margin-top: 0rem;
         background-color: var(--sys-inverse-on-surface);
@@ -186,7 +188,6 @@
           &:hover {
             text-decoration: none;
             background-color: transparent;
-            /* color: var(--sys-surface-tint); */
           }
 
           &:focus {
@@ -197,82 +198,69 @@
       }
     }
 
-    /* stacked */
-    /*.announcements-wrapper {
-      gap: 2rem;
-      flex: 1;
-      max-width: 32.6875rem;
-
-      @include mixing.respond-to('small', 'xsmall') {
-        max-width: none;
-      }
-    } */
-
-    /* NEW: Side-by-Side Wrapper */
+    /* Right Side: Announcements Cards Wrapper */
     .announcements-wrapper {
+      flex: 1.2;
+      min-width: 0;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
-      flex: 1;
 
-      /* On medium and small screens, stack them vertically so they aren't squished */
-      @include mixing.respond-to('medium', 'small', 'xsmall') {
+      /* Stack the two cards vertically on smaller screens */
+      @media (max-width: 959px) {
         grid-template-columns: 1fr;
       }
-    }
-
-    /* stacked cards */
-    /*.announcements {
-      background-color: var(--sys-inverse-on-surface);
-      padding: 1.5rem;
-      border-radius: .5rem;
-      border: .0625rem solid var(--sys-primary);
-      gap: 1rem;
-      height: fit-content;
-
-      @include mixing.respond-to('small', 'xsmall') {
-        padding: 1rem;
-        gap: 1rem;
-      } */
 
       .announcements {
-      background-color: var(--sys-inverse-on-surface);
-      padding: 1.5rem;
-      border-radius: .5rem;
-      border: .0625rem solid var(--sys-primary);
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-
-      @include mixing.respond-to('small', 'xsmall') {
-        padding: 1rem;
+        background-color: var(--sys-inverse-on-surface);
+        padding: 1.5rem;
+        border-radius: .5rem;
+        border: .0625rem solid var(--sys-primary);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
         gap: 1rem;
-      }
+        min-width: 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
 
-      .announcements-item-main-title{
-        font-size: vars.$mediumFontSize;
-        font-weight: vars.$normal;
-        line-height: 2rem;
-      }
-
-      .announcements-item-title {
-        color: var(--darkText);
-
-        @include mixing.respond-to('medium', 'small', 'xsmall') {
-          font-size: vars.$largeFontSize;
+        @media (max-width: 959px) {
+          padding: 1rem;
+          gap: 1rem;
         }
-      }
-      ul {
+
+        /* Ensure images inside cards scale properly */
+        img {
+          max-width: 100%;
+          height: auto !important;
+        }
+
+        .announcements-item-main-title {
+          font-size: vars.$mediumFontSize;
+          font-weight: vars.$normal;
+          line-height: 2rem;
+        }
+
+        .announcements-item-title {
+          color: var(--darkText);
+
+          @media (max-width: 959px) {
+            font-size: vars.$largeFontSize;
+          }
+        }
+
+        ul {
           li {
             list-style: disc outside;
             margin: 0 0 1rem 1.25rem;
             padding: 0;
-            }
+          }
         }
       }
     }
+  }
 
+  /* --- ABOUT SECTION --- */
   .about {
     .about-content {
       @include mixing.respond-to('small', 'xsmall') {
@@ -352,5 +340,4 @@
       }
     }
   }
-
 }
