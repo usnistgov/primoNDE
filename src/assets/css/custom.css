@@ -5,7 +5,13 @@ background-color: gray;
 opacity: 90%;
 }
 
-/* LOCAL BANNER */
+/* style h2 text above search bar */
+div.custom-search-bar-container h2 {
+    text-shadow: 0 0 15px #000;
+    padding-bottom: .5em;
+}
+
+/* BEGIN LOCAL BANNER */
 body::before
 {
     content: "This site is in early development";
@@ -18,7 +24,43 @@ body::before
 }
 /* END local banner */
 
-div.custom-search-bar-container h2 {
-    text-shadow: 0 0 15px #000;
-    padding-bottom: .5em;
+
+/* Hide the default NDE No Results element */
+nde-search-no-results {
+    display: none !important;
 }
+
+/* BEGIN Fetch Item - Citation Linker Hide certain fields */
+
+/* removes radio 1 - books */
+mat-radio-button:has(input[value="book"])  {
+  display:none;
+}
+/* removes radio 2 - journal */
+mat-radio-button:has(input[value="journal"])  {
+  display:none;
+}
+/* BEGIN CITATION LINKER: Hide Specific Fields
+Uses the new 'data-qa' attributes for safer, exact targeting */
+
+/* Remove the all but spage and epage unused fields */
+formly-field[data-qa="citationLinker.publisher"],
+formly-field[data-qa="citationLinker.pubdate"],
+formly-field[data-qa="citationLinker.issue"],
+formly-field[data-qa="citationLinker.aufirst"],
+formly-field[data-qa="citationLinker.aulast"],
+formly-field[data-qa="citationLinker.atitle"],
+formly-field[data-qa="citationLinker.jtitle"],
+formly-field[data-qa="citationLinker.date"],
+formly-field[data-qa="citationLinker.volume"],
+formly-field[data-qa="citationLinker.issn"],
+formly-field[data-qa="citationLinker.auinit"] {
+    display: none !important;
+}
+
+/* Specifically hides the spage/epage 2col field */
+formly-field:has(> formly-group > formly-field[data-qa="citationLinker.spage"]) {
+    display: none !important;
+}
+
+/* END Fetch Item - Citation Linker Hide certain fields */
