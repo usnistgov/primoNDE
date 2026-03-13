@@ -1,0 +1,114 @@
+:host {
+  display: block;
+  width: 100%;
+  padding: 3rem 1rem;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+.no-results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  /* Top centered section styles */
+  .did-you-mean-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+
+    .mat-icon {
+      margin-bottom: 12px;
+      width: 60px;
+      height: 60px;
+    }
+
+    .no-record-found {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+
+    .no-results {
+      font-size: 16px;
+      color: #333;
+    }
+  }
+
+/* 3-Card Grid layout */
+  .custom-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1100px;
+    width: 100%;
+    align-items: stretch;
+    box-sizing: border-box;
+
+    /* Breakpoint: On screens smaller than 960px (Tablets & Phones), stack into 1 column */
+    @media (max-width: 959px) {
+      grid-template-columns: 1fr;
+    }
+
+    .custom-card {
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      text-align: left;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      min-width: 0;
+
+      .card-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin: 0 0 16px 0;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        padding-top: 10px;
+        margin: 0;
+
+        li {
+          font-size: 15px;
+          color: #555;
+          margin-bottom: 12px;
+          line-height: 1.5;
+          position: relative;
+          padding-left: 16px;
+
+          &::before {
+            content: "•";
+            color: #00706e;
+            font-weight: bold;
+            font-size: 18px;
+            position: absolute;
+            left: 0;
+            top: -2px;
+          }
+
+          a {
+            color: #0075b0;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

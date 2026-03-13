@@ -57,96 +57,53 @@
   <div class="flex-row flex-layout-space-between width-100 welcome-announcements-container">
     <div class="welcome display-flex flex-column flex-layout-start">
       <h2 aria-level="2" role="heading" class="welcome-title mat-headline-medium ">Welcome to the NIST Research Library and Museum</h2>
-      <!-- <span class="welcome-content">Access your account by signing in and enabling more capabilities</span> -->
       <a id="myLibraryCard" tabindex="0" aria-label="Go to my library card" role="link">Go to my library card</a>
       <p>The NIST Library Search provides simple, one-stop searching for books and e-books, videos, articles, digital media, and more. It also helps you manage your research. NIST staff, you can sign in to:</p>
       <ul role="list">
-        <li role="listitem">
-          Manage your “Library Account”
-        </li>
-        <li role="listitem">
-              Save item records to your “Favorites”
-        </li>
-        <li role="listitem">
-          Save searches to your “Favorites”
-        </li>
-        <li role="listitem">
-          Export item records to other applications
-        </li>
-        <li role="listitem">
-          Place holds on physical items</li>
-        <li role="listitem">
-          Renew items you have checked out</li>
+        <li role="listitem">Manage your “Library Account”</li>
+        <li role="listitem">Save item records to your “Favorites”</li>
+        <li role="listitem">Save searches to your “Favorites”</li>
+        <li role="listitem">Export item records to other applications</li>
+        <li role="listitem">Place holds on physical items</li>
+        <li role="listitem">Renew items you have checked out</li>
       </ul>
       <div class ="welcome-list">
-        <p>Watch this <a href="https://tube.nist.gov/media/NIST+Research+Library+Search+Tutorial/1_byjlrcif">NIST Library Search video</a> to learn the basics of using Library Search.
-        </p>
-        <p>Additional Library Search aids are available on the left navigation menu of the <a href="https://inet.nist.gov/mr/library?check_logged_in=1" target="_blank">NIST Library's website.</a>
-        </p>
+        <p>Watch this <a href="https://tube.nist.gov/media/NIST+Research+Library+Search+Tutorial/1_byjlrcif">NIST Library Search video</a> to learn the basics of using Library Search.</p>
+        <p>Additional Library Search aids are available on the left navigation menu of the <a href="https://inet.nist.gov/mr/library?check_logged_in=1" target="_blank">NIST Library's website.</a></p>
       </div>
     </div>
-    <div class="announcements display-flex flex-column">
-      <header class="flex-column gap-1">
-        <h2 class="announcements-item-title mat-headline-large" role="heading" aria-level="2">What's New with Library Search?</h2>
-        <h3 role="heading" aria-level="3" class="mat-title-medium">July Update</h3>
-      </header>
-      <article>
-        <ul role="list">
-          <li role="listitem">
-            Boulder Labs Interlibrary Loan (ILL) option now available for NIST staff in Boulder.
-          </li>
-          <li role="listitem">
-            ORCID and Library of Congress URLs now linked in records.
-          </li>
-          <li role="listitem">
-            NIST Technical Series numbers are now in the detailed records and Collection Lobby.
-          </li>
-        </ul>
-        <p>Additional details on current and past releases can be found on <a href="https://github.com/usnistgov/primo-explore-devenv/releases" target="_blank">https://github.com/usnistgov/primo-explore-devenv/releases</a></p>
-      </article>
 
+    <!-- stacked cards ---
+    <div class="announcements-wrapper display-flex flex-column"> -->
+    <div class="announcements-wrapper">
+
+      <div class="announcements display-flex flex-column">
+        <header class="flex-column gap-1">
+          <h2 class="announcements-item-title mat-headline-large" role="heading" aria-level="2">What am I searching?</h2>
+        </header>
+        <article>
+          <a href="./custom/01NIST_INST:01NIST_NDE/assets/html/search.html" target="_new" style="padding-top: 90%;" class="md-primoExplore-theme">
+          <img src="./custom/01NIST_INST:01NIST_NDE/assets/images/whatsearch.png" alt="What am I Searching image showing four main search profiles" style="max-width: auto;width: auto;" width="auto"></a>
+          <p style="text-align: right"><a href="./custom/01NIST_INST:01NIST_NDE/assets/html/search.html" target="_new" class="md-primoExplore-theme">more info ...</a></p>
+        </article>
+      </div>
+
+      <div class="announcements display-flex flex-column">
+        <header class="flex-column gap-1">
+          <h2 class="announcements-item-title mat-headline-large" role="heading" aria-level="2">What's New with Library Search?</h2>
+          <h3 role="heading" aria-level="3" class="mat-title-medium">July Update</h3>
+        </header>
+        <article>
+          <ul role="list">
+            <li role="listitem">Boulder Labs Interlibrary Loan (ILL) option now available for NIST staff in Boulder.</li>
+            <li role="listitem">ORCID and Library of Congress URLs now linked in records.</li>
+            <li role="listitem">NIST Technical Series numbers are now in the detailed records and Collection Lobby.</li>
+          </ul>
+          <p>Additional details on current and past releases can be found on <a href="https://github.com/usnistgov/primo-explore-devenv/releases" target="_blank">https://github.com/usnistgov/primo-explore-devenv/releases</a></p>
+        </article>
+      </div>
     </div>
   </div>
-
-  <!-- <div class="about display-flex width-100">
-    <div class="about-content flex-row">
-      <div class="about-text flex-column flex-space-between ">
-        <h2 role="heading" aria-level="2" class="about-text-title mat-headline-large">About the Library</h2>
-        <p class="about-text-description">
-          The NIST Library Search provides simple, one-stop searching for books and e-books, videos, articles, digital media, and more. It also helps you manage your research. NIST staff, you can sign in to:
-        </p>
-      <div class="help-sign-in-container flex-column gap-05">
-          <span>
-
-          </span>
-          <ul role="list">
-            <li role="listitem">
-
-              <span><a href="https://inet.nist.gov/mr/library/library-search-my-library-account" target="_blank">Manage your “Library Account”</a></span>
-            </li>
-            <li role="listitem">
-
-              <span><a href="https://inet.nist.gov/mr/library/library-search-saving-managing-records" target="_blank">Save item records to your “Favorites”</a></span></li>
-            <li role="listitem">
-
-              <span><a href="https://inet.nist.gov/mr/library/library-search-saving-managing-search-queries" target="_blank">Save searches to your “Favorites”</a></span></li>
-            <li role="listitem">
-
-              <span><a href="https://inet.nist.gov/mr/library/library-search-exporting-records" target="_blank">Export item records to other applications</a></span></li>
-            <li role="listitem">
-
-              <span>Place holds on physical items</span></li>
-            <li role="listitem">
-
-              <span>Renew items you have checked out</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="about-image flex-layout-center-center">
-        <img alt="" src="assets/images/homePageImages/about_image.svg">
-      </div>
-    </div>
-  </div>-->
 </main>
 </main>
 </body>
