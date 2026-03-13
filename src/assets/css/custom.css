@@ -1,3 +1,5 @@
+/* BEGIN search bar styling */
+
 /* Hide the background overlay in the search bar container */
 .custom-search-bar-container .background-overlay {
 /* display: none; */
@@ -11,7 +13,42 @@ div.custom-search-bar-container h2 {
     padding-bottom: .5em;
 }
 
-/* LOCAL BANNER */
+/* Increase the height of the homepage search banner */
+.search-container .custom-search-bar-container {
+    height: 15rem !important;
+    min-height: 15rem !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* search bar background */
+/* nde-top-bar {
+    background-color: #12659c !important;
+} */
+
+/* END search bar styling */
+
+/* BEGIN Search Button Styling */
+
+/* Contrasting background to the Ask Anything and Advanced Search buttons */
+nde-top-bar button[data-qa="natural-language-search-button"],
+nde-top-bar button[data-qa="advanced_search_button"] {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    border-radius: 24px !important;
+    padding: 0 16px !important;
+    transition: background-color 0.2s ease !important;
+}
+
+/* Button hover color styling */
+nde-top-bar button[data-qa="natural-language-search-button"]:hover,
+nde-top-bar button[data-qa="advanced_search_button"]:hover {
+    background-color: rgba(0, 0, 0, 0.35) !important;
+}
+
+/* END Search Button Styling */
+
+/* LOCAL Banner */
 body::before
 {
     content: "This site is in early development";
@@ -21,10 +58,4 @@ body::before
     width: 100%;
     font-weight: bold;
     font-size: large;
-}
-/* END local banner */
-
-/* search bar background */
-nde-top-bar {
-    background-color: #12659c !important;
 }
