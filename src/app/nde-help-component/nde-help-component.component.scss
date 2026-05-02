@@ -1,0 +1,122 @@
+.help-component-wrapper {
+  display: flex;
+  align-items: center;
+
+  .help-btn {
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+
+    &:hover,
+    &:focus {
+      background-color: rgba(0, 0, 0, 0.1);
+      outline: none;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  /* Help Menu Background Overlay */
+  #clearContainer {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
+    transition:
+      opacity 0.3s ease,
+      background-color 0.3s ease;
+    opacity: 0;
+
+    &.show {
+      opacity: 0.48;
+      background-color: #4a667c;
+    }
+  }
+
+  /* Help Menu Content Box */
+  .helpMenu-content {
+    background-color: #ffffff;
+    box-shadow:
+      0 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    font-size: 15px;
+    margin: 10px 0;
+    max-width: 375px;
+    max-height: calc(100vh - 10px);
+    overflow: auto;
+    position: fixed;
+    top: 64px;
+    right: 20px;
+    z-index: 999;
+
+    transform: scale(0);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform-origin: right top;
+
+    a {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+      color: black;
+      display: block;
+      padding: 16px;
+      text-decoration: none;
+
+      &:hover {
+        color: #007474 !important;
+      }
+    }
+  }
+
+  #helpMenuBox {
+    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+    transition-delay: 0.1s;
+  }
+
+  /* The Close Button (X) */
+  .close {
+    color: #000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 5px 15px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+
+  /* Core Animation Classes */
+  .hidden {
+    display: none !important;
+  }
+
+  .scaleUp {
+    transform: scale(1);
+  }
+
+  /* Mobile Responsiveness */
+  @media screen and (max-width: 600px) {
+    .helpMenu-content {
+      left: 0;
+      right: 0;
+      top: 15%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}
