@@ -19,7 +19,7 @@
        [class.scaleUp]="isAnimating"
        [style.opacity]="isAnimating ? 1 : 0">
 
-    <span class="close" (click)="closeMenu()">&times;</span>
+    <span class="close" role="button" aria-label="Close help" title="Close help" (click)="closeMenu()">&times;</span>
 
     <div id="helpMenuBox" [style.opacity]="isAnimating ? 1 : 0">
       <a href="https://inet.nist.gov/mr/library/how-use-nist-library-search" target="_blank">NIST Library Search Tips &amp; Videos</a>
